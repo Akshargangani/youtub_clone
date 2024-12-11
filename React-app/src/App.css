@@ -1,0 +1,267 @@
+/* .sidebar{
+  width:250px;
+  background-color: #202020;
+  height: 100vh;
+  position: fixed;
+  top:0;
+  left:0;
+  overflow-y: auto;
+  padding-top: 20px;
+}
+.sidebar a {
+  padding: 10px 15px;
+  text-decoration: none;
+  font-size: 14px;
+  color: #fff;
+  display: block;
+}
+.sidebar a:hover {
+  background-color: #383838;
+}
+.sidebar .logo {
+  display: flex;
+  align-items: center;
+  padding: 0 15px;
+  margin-bottom: 20px;
+}
+.sidebar .logo img {
+  height: 24px;
+  margin-right: 10px;
+}
+.sidebar .section-title {
+  padding: 10px 15px;
+  font-size: 12px;
+  color: #909090;
+}
+.main-content {
+  margin-left: 240px;
+  padding: 20px;
+}
+.search-bar {
+  display: flex;
+  align-items: center;
+  background-color: #121212;
+  padding: 10px;
+  border-radius: 2px;
+}
+.search-bar input {
+  flex: 1;
+  padding: 5px;
+  border: none;
+  background-color: #121212;
+  color: #fff;
+}
+.search-bar button {
+  background-color: #303030;
+  border: none;
+  padding: 5px 10px;
+  color: #fff;
+  cursor: pointer;
+}
+.filter-bar {
+  display: flex;
+  overflow-x: auto;
+  padding: 10px 0;
+}
+.filter-bar button {
+  background-color: #383838;
+  border: none;
+  padding: 5px 10px;
+  margin-right: 10px;
+  color: #fff;
+  cursor: pointer;
+  border-radius: 2px;
+}
+.filter-bar button.active {
+  background-color: #fff;
+  color: #000;
+}
+.video-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 20px;
+}
+.video-item {
+  background-color: #202020;
+  padding: 10px;
+  border-radius: 2px;
+}
+.video-item img {
+  width: 100%;
+  border-radius: 2px;
+}
+.video-item .video-info {
+  padding: 10px 0;
+}
+.video-item .video-info h4 {
+  margin: 0;
+  font-size: 14px;
+}
+.video-item .video-info p {
+  margin: 5px 0 0;
+  font-size: 12px;
+  color:#909090;
+} */
+
+
+
+
+/* App.css */
+
+
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #000;
+}
+
+.youtube-app {
+  display: flex;
+  min-height: 100vh;
+}
+
+/* Sidebar Styling */
+.sidebar {
+  width: 240px;
+  background-color: #202020;
+  color: white;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.sidebar .logo {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.sidebar .logo img {
+  width: 100%;
+  height: auto;
+  max-width: 240px; /* Ensures the logo fits within the sidebar width */
+  display: inline-block;
+}
+
+.sidebar a {
+  display: flex;
+  align-items: center;
+  color: white;
+  text-decoration: none;
+  margin: 10px 0;
+  padding: 10px;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+.sidebar a.active, .sidebar a:hover {
+  background-color: #383838;
+}
+
+.sidebar i {
+  margin-right: 10px;
+}
+
+.section-title {
+  margin: 20px 0 10px;
+  font-size: 14px;
+  text-transform: uppercase;
+  color: #888;
+}
+
+/* Main Content Styling */
+.main-content {
+  flex: 1;
+  padding: 20px;
+  box-sizing: border-box;
+  overflow-y: auto;
+}
+
+.filter-bar {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+  gap: 10px;
+}
+
+.filter-bar form {
+  display: flex;
+  flex: 1;
+  max-width: 500px;
+  gap: 10px;
+}
+
+.filter-bar button {
+  background-color: #333; /* Dark background for buttons */
+  color: white; /* White text color */
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-right: 10px;
+}
+
+.filter-bar button.active {
+  background-color: #646cff; /* Light blue background for active button */
+}
+
+/* .filter-bar input {
+  flex: 1;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.filter-bar button {
+  padding: 10px 20px;
+  background-color: #cc0000;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+} */
+
+.filter-bar button.active {
+  background-color: #ff0000;
+}
+
+.video-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+.video-item {
+  background-color: white;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: transform 0.3s;
+}
+
+.video-item:hover {
+  transform: scale(1.05);
+}
+
+.video-item img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+.video-info {
+  padding: 15px;
+}
+
+.video-info h3 {
+  margin: 0 0 10px;
+  font-size: 18px;
+  color: #333;
+}
+
+.video-info p {
+  margin: 0;
+  font-size: 14px;
+  color: #666;
+}
